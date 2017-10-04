@@ -3,7 +3,7 @@ package com.samsung.itschool;
 public class LoopsTasks {
 
     public static void main(String[] args) {
-        // write your code here
+        // выводим числа Фибоначи
         for (long k : fibonachi(12)) {
             System.out.println(k);
         }
@@ -20,14 +20,12 @@ public class LoopsTasks {
      */
     public static double dist(double[] x, double[] y) {
         //todo Определить стартовое значение аккумулятора
-        double sum = 0;
+        double sum;
         //todo в цикле суммировать в аккумуляторе квадраты разностей координат.
-        for (int i = 0; i < x.length; i++) {
-            double r = Math.pow(x[i] - y[i], 2);
-            sum = sum + r;
-        }
+
+
         //todo вернуть квадратный корень накопленной суммы
-        return Math.sqrt(sum);
+        return 0;
     }
 
 
@@ -50,11 +48,7 @@ public class LoopsTasks {
     public static int[] fibonachi(int n) {
         //todo Определяем массив размерности n
         int[] mas = new int[1];
-
-        //return new int[]{1, 1, 2, 3, 5}
-
         //todo первые два элемента равны 1.
-        mas[0] = 1;
 
         //todo с третьего элемента число Фибоначи равно сумме двух предыдущих
 
@@ -87,13 +81,15 @@ public class LoopsTasks {
      * В случае, если корней нет, возвращаем Double.MAX_VALUE
      *
      * @param a - вектор параметров, задающий многочлен
-     * @return
+     * @return первый корень уравнения f(x) = 0 в интервале от min до max
      */
     public static double equation(double a[], double min, double max, double step) {
         //todo организовать цикл от min до max с шагом step
         double x = 0.0;
+
         //todo вычисляем значение функции f(x)
         double fx = 0.0;
+
         //Если f(x) = 0, возаращаем найденный корень, x
         if (fx < 0.000001) return x;
 
