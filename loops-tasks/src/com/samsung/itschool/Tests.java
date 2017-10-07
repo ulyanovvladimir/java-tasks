@@ -81,4 +81,40 @@ public class Tests {
         Assert.assertEquals(2.0, LoopsTasks.equation(new double[]{1, -5 , 6},-1000, 1000, 0.1), 0.000001);
     }
 
+    @Test
+    public void testLastEnemy0(){
+        Assert.assertEquals( "Среди врагов 1 -1 0 1 -1 искомым является третий враг с индексом 2",2 , LoopsTasks.lastEnemy(new int[]{1,-1, 0, 1, -1}));
+    }
+
+    @Test
+    public void testLastEnemy5(){
+        Assert.assertEquals("Среди врагов 2 5 3 искомым является второй враг с индексом 1", 1, LoopsTasks.lastEnemy(new int[]{2, 5, 3}));
+    }
+
+    @Test
+    public void testFactorial3(){
+        Assert.assertEquals("Факториал 3 должен равняться 6", 6, LoopsTasks.factorial(3));
+    }
+
+    @Test
+    public void testFactorial5(){
+        Assert.assertEquals("Факториал 5 должен равняться 120",120, LoopsTasks.factorial(5));
+    }
+
+    @Test
+    public void testFactorial0(){
+        Assert.assertEquals("Факториал 0 должен равняться 1",1, LoopsTasks.factorial(0));
+    }
+
+    @Test
+    public void testReverse3(){
+        Assert.assertArrayEquals("Массив чисел 1 2 3 должен выдавать в обратом порядке 3 2 1",
+                new int[]{3, 2, 1}, LoopsTasks.reverse(new int[]{1, 2, 3}));
+    }
+
+    @Test
+    public void testReverse4(){
+        Assert.assertArrayEquals("Массив чисел 0 1 2 3 должен выдавать в обратом порядке 3 2 1 0",
+                new int[]{3, 2, 1, 0}, LoopsTasks.reverse(new int[]{0, 1, 2, 3}));
+    }
 }

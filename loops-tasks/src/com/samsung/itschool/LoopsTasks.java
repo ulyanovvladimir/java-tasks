@@ -4,18 +4,22 @@ public class LoopsTasks {
 
     public static void main(String[] args) {
         // выводим числа Фибоначи
-        for (long k : fibonachi(12)) {
-            System.out.println(k);
-        }
+        System.out.println(factorial(5));
+
+        int i = lastEnemy(new int[]{3, 5, 2});
+        System.out.println(i);
+
+        System.out.println(lastEnemy(new int[]{-1, 1, 0, 1, -1}));
+
     }
 
 
     /**
-     * Декартово расстояние между точками n-мерного пространства
+     * Евклидово расстояние между точками n-мерного пространства
      *
      * @param x точка n-мерного пространства
      * @param y точка n-мерного пространства
-     * @return
+     * @return расстояние между точками
      * @link http://statistica.ru/glossary/general/evklidovo-rasstoyanie/
      */
     public static double dist(double[] x, double[] y) {
@@ -47,15 +51,14 @@ public class LoopsTasks {
      */
     public static int[] fibonachi(int n) {
         //todo Определяем массив размерности n
-        int[] mas = new int[1];
+        int[] mas;
         //todo первые два элемента равны 1.
 
         //todo с третьего элемента число Фибоначи равно сумме двух предыдущих
 
-        //Возвращаем массив mas
-        return mas;
+        //todo Возвращаем массив mas
+        return new int[1];
     }
-
 
     /**
      * Значение многочлена функции
@@ -66,9 +69,10 @@ public class LoopsTasks {
      * @return значение f(x)
      */
     public static double f(double a[], double x) {
+
         //todo заводим аккумулятор для суммы
         double sum;
-        //todo находим n как длину массива с параметрами
+        //todo находим n как длину массива параметров (переменная "a")
         int n;
         //todo в цикле суммируем по формуле
 
@@ -81,20 +85,58 @@ public class LoopsTasks {
      * В случае, если корней нет, возвращаем Double.MAX_VALUE
      *
      * @param a - вектор параметров, задающий многочлен
+     * @param min - минимальное значение x, левая граница отрезка
+     * @param max - максимальное значение x, правая граница отрезка
+     * @param step - шаг, на который мы изменяем x во время перебора
      * @return первый корень уравнения f(x) = 0 в интервале от min до max
      */
     public static double equation(double a[], double min, double max, double step) {
         //todo организовать цикл от min до max с шагом step
-        double x = 0.0;
+        //todo для каждого x вычисляем значение функции f(x)
+        //todo проверяем, что |f(x)| ~ 0
 
-        //todo вычисляем значение функции f(x)
-        double fx = 0.0;
+        //ПОДСКАЗКА: для вычисления значения f(x) можно испольовать вызов функции f(a,x), например для x = 1.5:
+        // double fx = f(a, 1.5);
 
-        //Если f(x) = 0, возаращаем найденный корень, x
-        if (fx < 0.000001) return x;
-
-        //todo если на заданном интервалле не нашли корней, возвращаем константу Double.MAX_VALUE
+        //если на заданном интервале не нашли корней, возвращаем константу Double.MAX_VALUE
         return Double.MAX_VALUE;
     }
 
+    /**
+     * Функция возвращает факториал числа
+     * @param n - число от которого берется факториал
+     * @return факториал числа n
+     *
+     */
+    public static long factorial(int n){
+        //todo реализовать с помощью цикла
+        // ПОДСКАЗКА: попробуйте использовать цикл с аккумулятором, по аналогии со суммой чисел.
+
+        return -1;
+    }
+
+    /**
+     * Космический рейнджер
+     * @link http://www.russiancodecup.ru/ru/tasks/round/57/A/
+     *
+     * Нужно найти индекс элемента массива,
+     * значение которого равняется сумме всех остальных элементов массива.
+     *
+     * @param f - массив сил врагов
+     * @return индекс врага с силой равной суммарной силе всех остальных врагов
+     */
+    public static int lastEnemy(int[] f){
+        //todo
+        return 0;
+    }
+
+    /**
+     * Реверс массива. Возвращает массив из элементов, расположенных в обратном порядке.
+     * @param arr исходный массив
+     * @return массив элементов, расположенных в обратном порядке
+     */
+    public static int[] reverse(int[] arr){
+        //todo
+        return arr;
+    }
 }
